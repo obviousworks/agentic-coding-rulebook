@@ -1,0 +1,389 @@
+PROMPT: Generate Custom AGENTS.md Configuration
+
+I need you to create a comprehensive, production-ready AGENTS.md file for my project that follows agentic coding best practices. I'll provide details about my project, and you'll generate a complete configuration file tailored to my specific needs.
+
+=== PROJECT INFORMATION ===
+
+## Project Overview
+Project Name: {{PROJECT_NAME}}
+Brief Description: {{PROJECT_DESCRIPTION}}
+Architecture Type: {{ARCHITECTURE_TYPE}} (e.g., Monolith, Microservices, Serverless, JAMstack)
+Domain: {{DOMAIN}} (e.g., E-commerce, Healthcare, FinTech, SaaS, Social Media)
+Scale/Stage: {{SCALE}} (e.g., MVP, Startup, Scale-up, Enterprise)
+
+## Technology Stack
+
+### Core Technologies
+Primary Programming Languages: {{PROGRAMMING_LANGUAGES}}
+(Example: TypeScript 5.x, Python 3.11+, Java 17, Go 1.21)
+
+Frameworks: {{FRAMEWORKS}}
+(Example: Next.js 14, FastAPI, Spring Boot, Express.js)
+
+Databases: {{DATABASES}}
+(Example: PostgreSQL 15, MongoDB 6, MySQL 8, Redis)
+
+Package Manager: {{PACKAGE_MANAGER}}
+(Example: npm, pnpm, yarn, pip, poetry, maven, gradle)
+
+### Key Dependencies
+List important libraries/frameworks with versions:
+{{KEY_DEPENDENCIES}}
+(Example: React 18.2, TailwindCSS 3.4, Prisma 5.x, FastAPI 0.110)
+
+### Development Tools
+Linter: {{LINTER}}
+Formatter: {{FORMATTER}}
+Type Checker: {{TYPE_CHECKER}}
+Testing Framework: {{TESTING_FRAMEWORK}}
+
+### Technologies to Explicitly Avoid
+{{TECHNOLOGIES_TO_AVOID}}
+(Example: Redux - use Zustand instead; Axios - use native fetch; jQuery - use modern JS)
+
+## Project Structure
+
+### Directory Structure
+Describe your project's folder organization:
+{{DIRECTORY_STRUCTURE}}
+(Example: Monorepo with apps/ and packages/, or standard src/ structure)
+
+### Key Directories
+{{KEY_DIRECTORIES}}
+(Example: 
+- /components - Reusable React components
+- /services - Business logic layer
+- /models - Database models
+- /api - API endpoints)
+
+## Development Guidelines
+
+### Coding Style Preferences
+{{CODING_STYLE}}
+(Example: 
+- Functional programming preferred over OOP
+- Use TypeScript strict mode
+- Prefer async/await over promises
+- 2-space indentation)
+
+### Naming Conventions
+{{NAMING_CONVENTIONS}}
+(Example:
+- Files: kebab-case.tsx
+- Components: PascalCase
+- Functions: camelCase with verb prefixes
+- Constants: UPPER_SNAKE_CASE)
+
+### Testing Strategy
+{{TESTING_STRATEGY}}
+(Example: 
+- Unit tests with Vitest
+- Integration tests for API endpoints
+- E2E with Playwright
+- Minimum 80% coverage for critical paths)
+
+### Git Workflow
+{{GIT_WORKFLOW}}
+(Example: 
+- Feature branches from main
+- Conventional commits
+- PR required for all changes
+- Squash and merge strategy)
+
+## Performance Considerations
+{{PERFORMANCE_REQUIREMENTS}}
+(Example:
+- API response time <200ms p95
+- First Contentful Paint <1.5s
+- Database queries must use indexes
+- Implement pagination for lists >50 items)
+
+## Security Requirements
+{{SECURITY_REQUIREMENTS}}
+(Example:
+- All inputs validated with Zod
+- Passwords hashed with bcrypt
+- JWT authentication required
+- HTTPS only in production
+- No secrets in code)
+
+## Deployment Process
+{{DEPLOYMENT_PROCESS}}
+(Example:
+- Docker containers on AWS ECS
+- CI/CD via GitHub Actions
+- Staging environment required
+- Database migrations automated)
+
+## Known Challenges or Constraints
+{{KNOWN_CHALLENGES}}
+(Example:
+- Legacy database schema can't be changed
+- Must support IE11 for enterprise clients
+- API rate limits from third-party services
+- Timezone handling complexity)
+
+## Additional Context
+{{ADDITIONAL_CONTEXT}}
+(Any other project-specific information that would help AI agents work effectively)
+
+=== GENERATION INSTRUCTIONS ===
+
+Based on the information provided above, please generate a complete AGENTS.md file that includes:
+
+1. **Project Overview Section**
+   - Clear description of project purpose and architecture
+   - Mention domain, scale, and any unique characteristics
+
+2. **Complete Tech Stack Documentation**
+   - All technologies with specific versions
+   - Key dependencies and their purposes
+   - Explicit "DO NOT USE" list with alternatives
+
+3. **Detailed Project Structure**
+   - Directory tree showing key folders
+   - Explanation of what lives where
+   - Architecture patterns in use
+
+4. **Setup and Development Commands**
+   - Installation steps
+   - Environment setup
+   - FILE-SCOPED commands (fast, preferred) for:
+     * Type checking single files
+     * Linting single files
+     * Running single tests
+   - PROJECT-WIDE commands (slow, use sparingly) for:
+     * Full builds
+     * Full test suites
+   - Include approximate execution times
+
+5. **Code Style and Conventions**
+   - Language-specific rules
+   - Naming conventions for all identifiers
+   - Formatting rules (indentation, quotes, line length)
+   - Do's ✅ and Don'ts ❌ with specific examples
+   - Reference to good pattern examples in codebase
+
+6. **Testing Instructions**
+   - Testing frameworks and locations
+   - How to run different types of tests
+   - Coverage requirements
+   - Testing patterns with code examples
+
+7. **Security Considerations**
+   - Authentication and authorization approach
+   - Input validation requirements
+   - Secrets management
+   - Data protection requirements
+   - Specific security rules for this project
+
+8. **Git Workflow and PR Process**
+   - Branch naming conventions
+   - Commit message format
+   - PR requirements and checklist
+   - Git operations that require approval
+
+9. **Safety and Permissions**
+   - Operations AI can do without asking
+   - Operations that require approval
+
+10. **Performance Guidelines**
+    - Optimization principles
+    - Performance requirements specific to this project
+    - Common performance pitfalls to avoid
+
+11. **Troubleshooting Section**
+    - Common issues and solutions
+    - Debugging approaches
+    - Known quirks of the tech stack
+
+12. **"When Stuck" Guidelines**
+    - How to ask clarifying questions
+    - When to propose a plan first
+    - How to reference existing patterns
+
+13. **Additional Resources**
+    - Links to documentation
+    - Architecture decision records location
+    - Design system or API docs
+
+14. **Context Management Notes**
+    - How AI agents should prioritize context
+    - Tips for efficient token usage
+    - When to create new sessions
+
+Format the output as a complete, ready-to-use Markdown file. Use:
+- Clear hierarchical headers (##, ###, ####)
+- Code blocks with language specifications
+- Bullet points for lists
+- Bold text for emphasis on critical rules
+- Checkboxes for checklists
+- Table format where appropriate
+
+Ensure the file is:
+- **Token-efficient**: Target ~1500-2500 tokens total
+- **Specific**: Use concrete examples, not vague principles
+- **Actionable**: Every rule should be clear and enforceable
+- **Production-ready**: Based on real-world best practices
+- **Tool-agnostic**: Works across all AI coding assistants
+
+=== EXAMPLE STRUCTURE TO FOLLOW ===
+
+Here's the basic structure (you'll fill in the details based on my project):
+
+```markdown
+# [Project Name]
+
+## Project Overview
+[Brief description, architecture, domain, scale]
+
+## Tech Stack
+
+### Core Technologies
+- **Language**: [with versions]
+- **Framework**: [with versions]
+- **Database**: [with versions]
+- **Cache**: [if applicable]
+- **Package Manager**: [specify]
+
+### Key Dependencies
+- [Library]: [Version and purpose]
+
+### Development Tools
+- **Linter**: [tool]
+- **Formatter**: [tool]
+- **Type Checker**: [tool]
+- **Testing**: [framework]
+
+### Explicitly DO NOT Use
+- [Technology]: [Reason and alternative]
+
+## Setup Commands
+```bash
+# Installation
+[commands]
+
+# Environment setup
+[commands]
+
+# Database setup
+[commands]
+
+# Start development
+[commands]
+```
+
+## Build and Development Commands
+
+### File-Scoped Commands (Preferred - Fast)
+```bash
+# Type check single file (X seconds)
+[command] path/to/file.ext
+
+# Lint single file
+[command] path/to/file.ext
+
+# Run single test
+[command] path/to/test.ext
+```
+
+### Project-Wide Commands (Use Sparingly)
+```bash
+# Full type check (X minutes)
+[command]
+
+# Full test suite (X minutes)
+[command]
+
+# Full build (X minutes)
+[command]
+```
+
+**Important**: Always use file-scoped commands...
+
+## Code Style and Conventions
+
+### Language-Specific Rules
+- [Rule with specific example]
+
+### Naming Conventions
+- **Files**: [pattern]
+- **Variables**: [pattern]
+- **Functions**: [pattern]
+- **Classes**: [pattern]
+- **Constants**: [pattern]
+
+### Formatting Rules
+- **Indentation**: [spaces/tabs]
+- **Line Length**: [max chars]
+- **Quotes**: [single/double]
+- **Semicolons**: [required/optional]
+
+### Do's ✅
+- [Specific pattern - reference actual file]
+
+### Don'ts ❌
+- [Specific anti-pattern - why it's bad]
+
+### Good and Bad Examples
+**Avoid**: `path/to/bad/example.ext` - [why]
+**Prefer**: `path/to/good/example.ext` - [why]
+
+## Project Structure
+```
+/
+├── [directory]/          # [Description]
+└── [directory]/          # [Description]
+```
+
+**Key Files**:
+- `path/to/important/file`: [What it does]
+
+**Architecture Patterns**:
+- [Pattern used in this project]
+
+## Testing Instructions
+[Complete testing setup and requirements]
+
+## Security Considerations
+[Project-specific security requirements]
+
+## Git Workflow and PR Process
+[Branching, commits, PR requirements]
+
+## Safety and Permissions
+[What AI can/cannot do without asking]
+
+## Performance Considerations
+[Performance requirements and optimization guidelines]
+
+## Troubleshooting and Common Issues
+[Known issues and solutions]
+
+## When Stuck or Uncertain
+[How to handle uncertainty]
+
+## Additional Resources
+[Links to docs, design systems, etc.]
+
+## Context Management Notes
+**For AI Agents**: 
+[Context prioritization guidance]
+
+---
+
+**Last Updated**: [Date]  
+**Maintained By**: [Team]  
+**Version**: [Version]
+```
+
+=== NOW GENERATE ===
+
+Please create the complete AGENTS.md file based on my project information above. Make it production-ready, specific to my stack, and immediately usable.
+
+If any critical information is missing from my project details, please:
+1. Ask clarifying questions about what's missing
+2. Make reasonable assumptions based on common patterns for similar projects
+3. Note any assumptions you made in a comment at the top
+
+Generate the complete file now.
